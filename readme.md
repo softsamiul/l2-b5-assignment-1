@@ -49,7 +49,7 @@ add(1, "2"); // Will give error type string not assignable to type number
 Example:
 
 ```ts
-Type Product = {
+type Product = {
     id: number;
     name: string;
     price: number
