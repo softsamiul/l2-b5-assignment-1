@@ -27,7 +27,7 @@ const user = {
 const userName = getValue(user, "name");
 ```
 
-#### How does TypeScript help in improving code quality and project maintainability?
+#### 6. How does TypeScript help in improving code quality and project maintainability?
 
 <strong>Ans:</strong> TypeScript improves code quality and project maintainability in several important way by adding <strong>static typing</strong>, <strong>scalability for large codebases</strong>, <strong>safe refactoring</strong>, <strong>early bug detection</strong> and many more.
 
