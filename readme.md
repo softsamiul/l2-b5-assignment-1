@@ -1,33 +1,31 @@
 #### 2. What is the use of the keyof keyword in TypeScript? Provide an example.
 
-`Ans: In TypeScript keyof keyword is used to extract the keys of a object and create a union of string literal types. It useful when we refer keys of an object in a type-safe way.`
+<strong>Ans:</strong> In TypeScript keyof keyword is used to extract the keys of a object and create a union of string literal types. It useful when we refer keys of an object in a type-safe way.
 
 Example:
 
-<pre>```typescript
-
+```ts
 type User = {
-    id: numer;
-    name: string;
-    isAdmin: boolean;
-}
+  id: numer;
+  name: string;
+  isAdmin: boolean;
+};
 // creating union type from User using keyof
-type UserProperties = keyof User
+type UserProperties = keyof User;
 // UserProperties = "id" | "name" | "isAdmin"
 
 // keyof using with generic function
-function getValue<T, k extends keyof T>(obj:T, key: K): t[K]{
-    return obj[key]
+function getValue<T, k extends keyof T>(obj: T, key: K): t[K] {
+  return obj[key];
 }
 
 const user = {
-    id: 101,
-    name: "Sam",
-    isAdmin: false
-}
-const userName = getValue(user, 'name')
-
-```</pre>
+  id: 101,
+  name: "Sam",
+  isAdmin: false,
+};
+const userName = getValue(user, "name");
+```
 
 #### How does TypeScript help in improving code quality and project maintainability?
 
@@ -36,12 +34,12 @@ const userName = getValue(user, 'name')
 <strong>Static typing and early bug detectinon:</strong> It prevents many runtine errors by catching the type mistakes at compile time.
 Example:
 
-<pre>```typescript
-function add(a:number, b:number):number{
-    return a + b
+```ts
+function add(a: number, b: number): number {
+  return a + b;
 }
-add(1, "2") // Will give error type string not assignable to type number
-```</pre>
+add(1, "2"); // Will give error type string not assignable to type number
+```
 
 <strong>Scalability for large codebases:</strong> Helps to manage large and complex codebase easily by giving strict typing and predictable interfaces.
 
@@ -50,12 +48,12 @@ add(1, "2") // Will give error type string not assignable to type number
 <strong>Self documenting code:</strong> Type definitations serve as built-in documentation and helping developers understand the code quickly. Below example explaing the code itself.
 Example:
 
-<pre>```typescript
+```ts
 Type Product = {
     id: number;
     name: string;
     price: number
 }
-```</pre>
+```
 
 Along with above options typescript help us in more ways like better IDE support and autocompletion which helps developers to write code more faster and efficitively, integration with modern tooling like ESLint, Prettier etc to write clean consistent and bug free code.
